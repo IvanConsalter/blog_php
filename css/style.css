@@ -72,8 +72,10 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 30px;
+  padding: 0 2rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .post-box:first-child {
@@ -128,8 +130,8 @@ main {
   grid-template-columns: 75% 25%;
   grid-template-rows: auto;
   grid-template-areas: "main sidebar";
-  grid-gap: 10px;
-  padding-top: 30px;
+  grid-gap: 2rem;
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 250px;
@@ -159,7 +161,7 @@ main {
 }
 
 .img-container img {
-  width: 60%;
+  width: 100%;
 }
 
 /* POST ASIDE */
@@ -207,4 +209,52 @@ footer {
 
 footer a {
   color: #27eb8d;
+}
+
+/* MOBILE */
+@media(max-width: 999px) {
+
+  /* HOME */
+  header {
+    width: 100%;
+  }
+
+  #logo {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 50px;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #title-container {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  #posts-container {
+    margin-top: 20px;
+  }
+
+  .post-box {
+    flex: 100% 1 0;
+    padding: 15px;
+    margin: 0;
+  }
+
+  /* POST */
+  #post-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "main"
+    "sidebar";
+  }
+
+  .img-container img {
+    width: 100%;
+  }
+
 }
